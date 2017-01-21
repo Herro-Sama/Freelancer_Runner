@@ -5,8 +5,9 @@ public class Pickup : MonoBehaviour {
 
     private Rigidbody2D body2d;
     // Use this for initialization
-    void Start () {
-        body2d = GetComponent<Rigidbody2D>();
+    void Start ()
+    {
+
     }
 
     // Update is called once per frame

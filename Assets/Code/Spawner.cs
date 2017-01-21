@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
         {
             var newTransform = transform;
 
-            Instantiate(prefabs[Random.Range(0, prefabs.Length)], newTransform.position, Quaternion.identity);
+            Instantiate(prefabs[Random.Range(0, prefabs.Length)], newTransform.position + new Vector3(0,(Random.Range(-30,220)),0), Quaternion.identity);
             ResetDelay();
         }
 

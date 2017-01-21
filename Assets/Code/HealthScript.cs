@@ -17,5 +17,10 @@ public class HealthScript : MonoBehaviour
     {
         Health -= (3 * Time.deltaTime);
         TextBox.text = "health = " + (int)Health;
+
+        if (Health > 100)
+        {
+            Health = 100;
+        }
     }
 }

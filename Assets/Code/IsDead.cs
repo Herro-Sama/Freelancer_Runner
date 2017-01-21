@@ -3,32 +3,25 @@ using System.Collections;
 using System;
 
 public class IsDead : StateMachineBehaviour {
-    int Playerdie = Animator.StringToHash("PlayerDie");
-    Animator anim;
+    Animator animator;
+
     void Start()
     {
-       anim = GetComponent<Animator>();
+
     }
 
-    private T GetComponent<T>()
-    {
-        throw new NotImplementedException();
-    }
+
 
     // Update is called once per frame
-    bool Update()
+    void Update()
     {
         GameObject Text = GameObject.Find("Text");
         HealthScript targetScript = Text.GetComponent<HealthScript>();
         if (targetScript.Health <= 0)
         {
-            anim.SetTrigger(Playerdie);
-            return true;
+            animator.SetTrigger("PlayerDead");
         }
-        else
-        {
-            return false;
-        }
+
     }
 }
 
