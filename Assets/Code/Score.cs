@@ -3,10 +3,14 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
-
 {
+public float ScoreMultiplier = 1;
+
+
     Text TextBox;
-    float PlayerScore = 0;
+    public float PlayerScore = 0;
+    
+
     // Use this for initialization
     void Start()
     {
@@ -16,7 +20,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerScore += (1 * Time.deltaTime);
+        PlayerScore += (ScoreMultiplier * Time.deltaTime);
         TextBox.text = "Score = " + (int)PlayerScore;
     }
 }
