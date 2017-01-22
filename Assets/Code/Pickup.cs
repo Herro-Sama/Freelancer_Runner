@@ -48,7 +48,7 @@ public class Pickup : MonoBehaviour {
             targetScript.ScoreMultiplier += 1;
 
             GameObject Text2 = GameObject.Find("Text");
-            HealthScript targetScript2 = Text.GetComponent<HealthScript>();
+            HealthScript targetScript2 = Text2.GetComponent<HealthScript>();
             targetScript2.Health -= 10;
         }
 
