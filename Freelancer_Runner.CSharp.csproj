@@ -80,6 +80,7 @@
     <Compile Include="Assets\Code\MakeDead.cs" />
     <Compile Include="Assets\Code\MoveObject.cs" />
     <Compile Include="Assets\Code\Pickup.cs" />
+    <Compile Include="Assets\Code\Quit.cs" />
     <Compile Include="Assets\Code\Score.cs" />
     <Compile Include="Assets\Code\Spawner.cs" />
     <Compile Include="Assets\Code\TileBackground.cs" />
