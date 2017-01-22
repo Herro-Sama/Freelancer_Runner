@@ -40,10 +40,16 @@ public class Pickup : MonoBehaviour {
 
         if (other.gameObject.tag == "TeaPickUp")
         {
+
+            Destroy(other.gameObject);
+
             GameObject Text = GameObject.Find("Score");
             Score targetScript = Text.GetComponent<Score>();
             targetScript.ScoreMultiplier += 1;
-            Destroy(other.gameObject);
+
+            GameObject Text2 = GameObject.Find("Text");
+            HealthScript targetScript2 = Text.GetComponent<HealthScript>();
+            targetScript2.Health -= 10;
         }
 
         if (other.gameObject.tag == "CoffeePickUp")
