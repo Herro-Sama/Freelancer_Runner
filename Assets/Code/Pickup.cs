@@ -26,6 +26,8 @@ public class Pickup : MonoBehaviour {
 
         if (other.gameObject.tag == "DMGPickUp")
         {
+            Destroy(other.gameObject);
+
             GameObject Text = GameObject.Find("Text");
             HealthScript targetScript = Text.GetComponent<HealthScript>();
             targetScript.Health -= 20;
@@ -34,7 +36,6 @@ public class Pickup : MonoBehaviour {
             Score targetScript2 = Text.GetComponent<Score>();
             targetScript2.ScoreMultiplier = 1;
 
-            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "TeaPickUp")
